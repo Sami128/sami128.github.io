@@ -7,7 +7,7 @@
 <meta name="description" content="Operations and analytics projects by Sami Ahmady: process improvement, reporting, and data tools.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sami Ahmady — Portfolio">
-<meta property="og:description" content="Operations and analytics projects: process improvement, reporting, and data tools.">
+<meta property="og:description" content="Operations and analytics projects, plus LLM engineering coursework.">
 <meta property="og:url" content="https://sami128.github.io/">
 <meta property="og:image" content="https://sami128.github.io/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -103,7 +103,10 @@
   }
   .open:hover { background: var(--ink); color: var(--paper); }
 
-  .note { color: var(--muted); padding-top: 1.5rem; margin: 0; }
+  .intro { color: var(--muted); margin: 1.25rem 0 0.5rem; max-width: 38rem; }
+  .work { margin: 0; }
+  .work dt { font-weight: 700; margin-top: 1.25rem; }
+  .work dd { margin: 0.2rem 0 0; max-width: 38rem; }
   .about p { margin: 1rem 0 0; max-width: 38rem; }
 
   @media (max-width: 480px) {
@@ -135,7 +138,23 @@
       <a class="open" href="https://seattle-wage-atlas.sami-ahmady-4595.chatgpt.site/">Open the live dashboard</a>
     </article>
 
-    <p class="note">New projects from my LLM engineering coursework will be added here as they're finished.</p>
+  </section>
+
+  <section aria-labelledby="llm">
+    <h2 id="llm">LLM engineering coursework</h2>
+    <p class="intro">Exercises I built in Python while taking Become an LLM Engineer in 8 Weeks on Udemy. I'll publish the code here as I clean up each piece.</p>
+    <dl class="work">
+      <dt>Chat completion apps</dt>
+      <dd>Python programs that call chat completion APIs, using system prompts to shape how the model responds.</dd>
+      <dt>Multi-provider chatbot</dt>
+      <dd>A chatbot that connects to more than one model provider's API.</dd>
+      <dt>Retrieval-augmented generation (RAG)</dt>
+      <dd>A question-answering pipeline that finds the most relevant passages in a set of documents and gives them to the model along with the question.</dd>
+      <dt>Hugging Face Transformers</dt>
+      <dd>Ran pretrained open models through the Transformers library and its pipeline interface.</dd>
+      <dt>Gradio interfaces</dt>
+      <dd>Wrapped these tools in Gradio web interfaces to test them the way a user would and adjust the experience.</dd>
+    </dl>
   </section>
 
   <section class="about" aria-labelledby="about">
@@ -143,6 +162,7 @@
     <p>I lead a high-volume pick operation at Amazon, where I've raised throughput 11% and built a browser-based audit tool, with AI-assisted coding, that cut audit time from 12 minutes to 2. Before that, I built Power BI dashboards and Excel-based reporting tools for Amazon Corporate through Securitas.</p>
     <p>I hold a B.A. in Business Administration from the University of Washington Foster School of Business, with concentrations in Information Systems and Marketing.</p>
   </section>
+
 </main>
 </body>
 </html>
