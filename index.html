@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sami Ahmady — Portfolio</title>
+<meta name="description" content="Operations and analytics projects by Sami Ahmady: process improvement, reporting, and data tools.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sami Ahmady — Portfolio">
+<meta property="og:description" content="Operations and analytics projects: process improvement, reporting, and data tools.">
+<meta property="og:url" content="https://sami128.github.io/">
+<meta property="og:image" content="https://sami128.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F8F9;
+    --ink: #1E2A33;
+    --muted: #56656F;
+    --line: #D3DAE0;
+    --tape: #F2C230;
+    --tape-ink: #1E2A33;
+    --link: #1E2A33;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #131A20;
+      --ink: #E7ECEF;
+      --muted: #9AA8B2;
+      --line: #2C3943;
+      --tape: #F2C230;
+      --tape-ink: #131A20;
+      --link: #E7ECEF;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 4.5rem 1.5rem 4rem; }
+  a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible { outline: 3px solid var(--tape); outline-offset: 3px; border-radius: 2px; }
+
+  /* Hero: the one bold element is the floor-tape lane under the name */
+  h1 {
+    font-size: clamp(2.6rem, 8vw, 4.25rem);
+    line-height: 1.02;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .tape {
+    height: 14px;
+    width: min(100%, 22rem);
+    margin: 1.1rem 0 1.6rem;
+    background: repeating-linear-gradient(
+      -45deg,
+      var(--tape) 0 22px,
+      var(--tape-ink) 22px 30px
+    );
+    border-radius: 2px;
+    transform-origin: left center;
+    animation: lay 700ms cubic-bezier(.2,.7,.2,1) both;
+  }
+  @keyframes lay { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @media (prefers-reduced-motion: reduce) { .tape { animation: none; } }
+
+  .lede { font-size: 1.25rem; line-height: 1.5; max-width: 36rem; margin: 0 0 1.5rem; }
+  .contact { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin: 0; padding: 0; list-style: none; color: var(--muted); }
+
+  h2 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin: 4rem 0 0.25rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .project { padding: 1.75rem 0; border-bottom: 1px solid var(--line); }
+  .project h3 { font-size: 1.375rem; line-height: 1.25; font-weight: 700; margin: 0 0 0.5rem; }
+  .project p { margin: 0 0 0.9rem; max-width: 38rem; }
+  .meta { color: var(--muted); font-size: 0.95rem; margin: 0 0 1rem; }
+  .open {
+    display: inline-block;
+    font-weight: 600;
+    padding: 0.55rem 1rem;
+    border: 2px solid var(--ink);
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  .open:hover { background: var(--ink); color: var(--paper); }
+
+  .note { color: var(--muted); padding-top: 1.5rem; margin: 0; }
+  .about p { margin: 1rem 0 0; max-width: 38rem; }
+
+  @media (max-width: 480px) {
+    .wrap { padding-top: 3rem; }
+    .lede { font-size: 1.125rem; }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <h1>Sami Ahmady</h1>
+    <div class="tape" aria-hidden="true"></div>
+    <p class="lede">I improve how operations run, using process analysis, reporting, and tools that the people doing the work actually adopt.</p>
+    <ul class="contact">
+      <li><a href="https://www.linkedin.com/in/sami-ahmady">LinkedIn</a></li>
+      <li><a href="mailto:ahmady.sami@outlook.com">ahmady.sami@outlook.com</a></li>
+      <li>Kent, Washington</li>
+    </ul>
+  </header>
+
+  <section aria-labelledby="projects">
+    <h2 id="projects">Projects</h2>
+
+    <article class="project">
+      <h3><a href="https://seattle-wage-atlas.sami-ahmady-4595.chatgpt.site/">Seattle Wage Atlas</a></h3>
+      <p>An interactive dashboard of public Seattle-area wage data. It connects to the source data API, so the figures refresh on their own as new data is released.</p>
+      <p class="meta">Public wage data, live API connection, built with AI-assisted coding</p>
+      <a class="open" href="https://seattle-wage-atlas.sami-ahmady-4595.chatgpt.site/">Open the live dashboard</a>
+    </article>
+
+    <p class="note">New projects from my LLM engineering coursework will be added here as they're finished.</p>
+  </section>
+
+  <section class="about" aria-labelledby="about">
+    <h2 id="about">About</h2>
+    <p>I lead a high-volume pick operation at Amazon, where I've raised throughput 11% and built a browser-based audit tool, with AI-assisted coding, that cut audit time from 12 minutes to 2. Before that, I built Power BI dashboards and Excel-based reporting tools for Amazon Corporate through Securitas.</p>
+    <p>I hold a B.A. in Business Administration from the University of Washington Foster School of Business, with concentrations in Information Systems and Marketing.</p>
+  </section>
+</main>
+</body>
+</html>
